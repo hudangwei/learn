@@ -1,24 +1,44 @@
-centos6.5 °²×°docker
-1.²é¿´ÏµÍ³°æ±¾ºÅ
+#centos6.5 å®‰è£…docker
+
+##1.æŸ¥çœ‹ç³»ç»Ÿç‰ˆæœ¬å·
+```shell
 lsb_release -a
-2.²é¿´ÄÚºË°æ±¾
+```
+
+##2.æŸ¥çœ‹å†…æ ¸ç‰ˆæœ¬
+```shell
 uname -a
-3.yum·½Ê½Éı¼¶ÄÚºË£¨ÒòÎªDockerÍÆ¼öÊ¹ÓÃ3.8ÒÔÉÏÄÚºË£©
+```
+
+##3.yumæ–¹å¼å‡çº§å†…æ ¸ï¼ˆå› ä¸ºDockeræ¨èä½¿ç”¨3.8ä»¥ä¸Šå†…æ ¸ï¼‰
+```shell
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 rpm -Uvh http://www.elrepo.org/elrepo-release-6-6.el6.elrepo.noarch.rpm
 yum --enablerepo=elrepo-kernel install kernel-lt -y
-4.ĞŞ¸ÄÄÚºËÆô¶¯Ïî
-vi /etc/grub.conf ĞÂ°²×°µÄÄÚºËÒ»°ãÔÚµÚÒ»¸ö,ÕâÀï°Ñdefault = 1 ¸ÄÎª default = 0
-5.ÖØÆôÏµÍ³
-reboot
-6.²é¿´ÄÚºËĞÅÏ¢
-uname -r
+```
 
-7.°²×°docker
+##4.ä¿®æ”¹å†…æ ¸å¯åŠ¨é¡¹
+```shell
+vi /etc/grub.conf 
+``` 
+æ–°å®‰è£…çš„å†…æ ¸ä¸€èˆ¬åœ¨ç¬¬ä¸€ä¸ª,è¿™é‡ŒæŠŠdefault = 1 æ”¹ä¸º default = 0
+
+##5.é‡å¯ç³»ç»Ÿ
+```shell
+reboot
+```
+
+##6.æŸ¥çœ‹å†…æ ¸ä¿¡æ¯
+```shell
+uname -r
+```
+
+##7.å®‰è£…docker
+```shell
 yum install -y epel-release
 yum install -y docker-io
 
 docker version
 
 docker -d
-
+```
